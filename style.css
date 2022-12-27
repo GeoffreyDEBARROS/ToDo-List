@@ -53,8 +53,7 @@ ul li {
 }
 ul li:before {
     content: url('./assets/img/chameleon.png');
-    padding: 0.6rem;
-    color: black;  
+    padding: 0.6rem; 
 }
 ul li:after {
     opacity: 0;
@@ -69,8 +68,8 @@ ul li:hover:after {
     animation: pseudoClassAnim 0.7s forwards;
 }
 li.checked:before {
-    content: "OK FAIT";
-    color: red;
+    content: url(./assets/img/icons8-done-32.png);
+    
 }
 @keyframes pseudoClassAnim {
     to {
