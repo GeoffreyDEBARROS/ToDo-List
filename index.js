@@ -32,3 +32,13 @@ list.addEventListener("click", (e) => {
   }
   storeList();
 });
+
+// Animation
+
+window.addEventListener("load", () => {
+  liste.style.opacity = 1;
+  liste.style.letterSpacing = "6px";
+});
+window.addEventListener("load", () => {
+  parda.style.opacity = 1;
+});

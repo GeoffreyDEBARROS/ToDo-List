@@ -1,17 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: 'Bebas Neue', cursive;
 }
 body {
     height: 100vh;
-    background: url(./assets/img/bg.jpg) center/cover;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(104,185,132,1) 100%);   
 }
 h1 {
     font-size: 2.5rem;
     text-align: center;
     padding-top: 50px;
+    letter-spacing: 6px;
+    color: #3D5656;
+}
+#parda {
+    opacity: 0;
+    transition: 1s;
+}
+#liste {
+    opacity: 0;
+    letter-spacing: 100px;
+    transition: 1s;
 }
 .main {
     height: 80vh;
@@ -24,21 +37,36 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.254);
-    backdrop-filter: blur(3px);
+    background: #FED049;
     border-radius: 15px;
+    box-shadow: -1px 1px 47px -2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: -1px 1px 47px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: -1px 1px 47px -2px rgba(0,0,0,0.65);
 }
 h3 {
     padding: 20px 0 50px 0;
     font-size: 2rem;
+    color: #3D5656;
 }
 input {
     margin: 0 0 25px 0;
-    background: rgba(255, 255, 255, 0.361);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(104,185,132,1) 100%);
+    height: 50px;
+    width: 180px;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.313);
     border-radius: 5px;
-    padding: 5px;
+    padding: 7px;
+    color: #FED049;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+input:focus{
+    border: 3px solid #3D5656;
+}
+input::placeholder{
+    color: #FED049;
+    font-size: 1.2rem;
 }
 ul {
     width: 100%;
@@ -50,6 +78,7 @@ ul li {
     position: relative;
     font-size: 1.2rem;
     cursor: pointer;
+    color: #3D5656;
 }
 ul li:before {
     content: url('./assets/img/chameleon.png');
@@ -64,15 +93,24 @@ ul li:hover:after {
     padding: 10px;
     font-size: 1rem;
     font-style: italic;
-    color: rgb(99, 230, 125);
+    color: #68B984;
     animation: pseudoClassAnim 0.7s forwards;
 }
 li.checked:before {
-    content: url(./assets/img/icons8-done-32.png);
-    
+    content: url(./assets/img/icons8-done-32.png);  
+}
+li.checked:hover:after {
+    content: "(supprimer)";
 }
 @keyframes pseudoClassAnim {
     to {
       opacity: 1;
     }
-  }
+}
+#copy {
+    right: 7px;
+    bottom: 7px;
+    position: absolute;
+    font-size: 0.9rem;
+    color: #3d56569a;
+}
