@@ -16,6 +16,7 @@ h1 {
     padding-top: 50px;
     letter-spacing: 6px;
     color: #3D5656;
+    text-shadow: 2px 2px 7px #FED049;
 }
 #parda {
     opacity: 0;
@@ -113,4 +114,42 @@ li.checked:hover:after {
     position: absolute;
     font-size: 0.9rem;
     color: #3d56569a;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {
+    #liste {
+        letter-spacing: 50px;
+    }
+    .listContainer {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+    .listContainer {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .listContainer {
+        width: 300px;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    ul li {
+        font-size: 1rem;
+    }
+    ul li:hover:after {
+        font-size: 0.7rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    #liste {
+        letter-spacing: 30px;
+    }
 }
